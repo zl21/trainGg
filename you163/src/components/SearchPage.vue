@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "SearchPage",
   data() {
@@ -42,8 +43,15 @@ export default {
       // 监听到input_v改变时即显示清空输入框icon
       if (this.input_v) {
         this.isCloseShow = true;
-      }
+      } 
     }
+  },
+  // 页面一加载就执行
+  created() {
+    // console.log(1111111);
+    axios.get("http://localhost:3344/aaa").then(_d => {
+      console.log(_d.data);
+    });
   },
   methods: {
     // 参数_v是用户实时输入的东西string
@@ -51,7 +59,6 @@ export default {
       // 将用户输入的东西赋值给在watch中被监听的变量input_v
       this.input_v = _v;
       console.log(_v);
-      
     },
     claerInputFn() {
       this.input_v = "";
