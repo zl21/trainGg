@@ -7,6 +7,7 @@
           class="search"
           v-model="input_v"
           @input="fieldValFn"
+          @keyup.enter="submitFn"
           placeholder="Pro会员专场·专属6折疯抢"
         >
           <!-- 使用插槽的方式插入 搜索框放大镜
@@ -43,15 +44,15 @@ export default {
       // 监听到input_v改变时即显示清空输入框icon
       if (this.input_v) {
         this.isCloseShow = true;
-      } 
+      }
     }
   },
   // 页面一加载就执行
   created() {
     // console.log(1111111);
-    axios.get("http://localhost:3344/aaa").then(_d => {
-      console.log(_d.data);
-    });
+    // axios.get("http://localhost:3344/aaa").then(_d => {
+    //   console.log(_d.data);
+    // });
   },
   methods: {
     // 参数_v是用户实时输入的东西string
@@ -60,9 +61,20 @@ export default {
       this.input_v = _v;
       console.log(_v);
     },
+    // 清空搜索框
     claerInputFn() {
       this.input_v = "";
       this.isCloseShow = false;
+    },
+    // enter按键的事件响应
+    submitFn() {
+      axios
+        .get("http://localhost:3344/search", {
+          params: { search_content: this.input_v }
+        })
+        .then(_d => {
+          console.log(_d.data);
+        });
     }
   }
 };
