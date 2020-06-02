@@ -9,7 +9,7 @@
 
     metaEl.setAttribute("content", "initial-scale=.5, maximum-scale=.5, minimum-scale=.5, user-scalable=no viewport-fit=cover")
 
-    console.log(doc, docEl, metaEl, devicePixelRatio)
+    // console.log(doc, docEl, metaEl, devicePixelRatio)
 
     function refreshRem() {
         var width = docEl.getBoundingClientRect().width;
@@ -18,7 +18,7 @@
         // 如果在ua里面找不到ipad，非ipad，普通手机适用
         if (!/ipad/.test(ua)) {
             if (width / 2 > 750) {
-                width = 750 * 2
+                width = 750 * devicePixelRatio
             }
             var rem = width / 10;
             docEl.style.fontSize = rem + "px";

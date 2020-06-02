@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import IndexWrap from '@/components/IndexWrap.vue'
-
+import SearchPage from '@/components/SearchPage'
 Vue.use(VueRouter)
 
   const routes = [
@@ -10,6 +10,11 @@ Vue.use(VueRouter)
     path: '/',
     name: 'IndexWrap',
     component: IndexWrap
+  },
+  {
+    path: '/search',
+    name: 'SearchPage',
+    component: SearchPage
   }
 ]
 

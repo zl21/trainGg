@@ -1,14 +1,14 @@
 <template>
   <div class="header">
     <van-row type="flex" justify="space-between">
-      <van-col span="5" class="header_h">
-        <img class="logo" src="../assets/logo.png" />
+      <van-col span="5">
+        <img class="logo" src="../assets/logo-img.png" />
       </van-col>
-      <van-col span="15" class="search">
-        <van-icon name="search" size=".5rem" />
+      <van-col @click='searchBtnFn' span="15" class="search">
+        <van-icon class="searchIcon" name="search" size=".5rem" />
         <span>搜索商品, 共29863款好物</span>
       </van-col>
-      <van-col span="3" class="header_h">
+      <van-col span="3">
         <van-button class="loginBtn" type="primary" size="mini">登录</van-button>
       </van-col>
     </van-row>
@@ -25,6 +25,11 @@ export default {
     return {
       msg: "zxcv"
     };
+  },
+  methods:{
+    searchBtnFn(){
+      this.$router.push('/search')
+    }
   }
 };
 </script>
@@ -46,7 +51,9 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-top: .081rem;
+}
+.searchIcon{
+  padding-top: .15rem;
 }
 .loginBtn {
   width: 0.98667rem;
@@ -59,8 +66,5 @@ export default {
   margin-left: 0.21333rem;
   font-size: 0.32rem;
   background: #fff;
-}
-.header_h {
-  font-size: 0.5rem;
 }
 </style>
