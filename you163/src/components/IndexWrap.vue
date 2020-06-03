@@ -1,6 +1,7 @@
 <template>
   <div class="header">
-    <van-row type="flex" justify="space-between">
+    <!-- logo + searchDiv + loginBtn -->
+    <van-row type="flex" justify="space-between" style="padding:0 .2rem">
       <van-col span="5">
         <img class="logo" src="../assets/logo-img.png" />
       </van-col>
@@ -36,6 +37,26 @@
         <img src="../assets/images/lun4.webp" />
       </van-swipe-item>
     </van-swipe>
+    <!-- 轮播图下面的三个小nodes -->
+    <div class="m-indexServicePolicy">
+      <ul>
+        <li>
+          <i
+            style="background-image: url(https://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png);"
+          ></i>网易自营品牌
+        </li>
+        <li>
+          <i
+            style="background-image: url(https://yanxuan.nosdn.127.net/2d0402ffcd52b3ec3b07422681c42a89.png);"
+          ></i>天无忧退货
+        </li>
+        <li>
+          <i
+            style="background-image: url(https://yanxuan.nosdn.127.net/eb61ee48e8942dbd1784c9ee75ebe955.png);"
+          ></i>48小时快速退款
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -77,11 +98,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .header {
-  padding: 0.21333rem 0.4rem;
+  padding: 0.21333rem 0 0.4rem 0;
 }
 .logo {
   width: 1.84rem;
   height: 0.53333rem;
+  padding-top: 0.1rem;
 }
 .search {
   height: 0.74667rem;
@@ -109,6 +131,7 @@ export default {
 }
 .tabWrap {
   font-size: 0.4rem;
+  padding: 0.2rem 0.2rem 0.1rem;
 }
 .my-swipe .van-swipe-item {
   color: #fff;
@@ -117,5 +140,33 @@ export default {
   text-align: center;
   background-color: #39a9ed;
   height: 4rem;
+}
+.m-indexServicePolicy {
+  width: 100%;
+}
+.m-indexServicePolicy ul {
+  height: 0.96rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.3rem 0 0.22rem;
+}
+.m-indexServicePolicy ul li {
+  flex: 1;
+  font-size: 0.32rem;
+  color: #333;
+  line-height: 0.42667rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.m-indexServicePolicy ul li i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.42667rem;
+  height: 0.42667rem;
+  font-size: 0.32rem;
+  color: #333;
+  line-height: 0.42667rem;
+  background-size: 100% 100%;
+  margin-right: 0.13rem;
 }
 </style>
