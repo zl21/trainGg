@@ -1,0 +1,8 @@
+/* 
+对vant框架本身一些样式的重置，如tab中的font-size 
+这些样式在.vue文件中设置并不会生效，
+只能通过引入外部样式css文件的方式来改变。(it is strange!)
+*/
+.tabWrap .van-tab{
+    font-size: .33rem;
+}

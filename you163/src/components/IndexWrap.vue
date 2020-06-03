@@ -4,7 +4,7 @@
       <van-col span="5">
         <img class="logo" src="../assets/logo-img.png" />
       </van-col>
-      <van-col @click='searchBtnFn' span="15" class="search">
+      <van-col @click="searchBtnFn" span="15" class="search">
         <van-icon class="searchIcon" name="search" size=".5rem" />
         <span>搜索商品, 共29863款好物</span>
       </van-col>
@@ -12,10 +12,17 @@
         <van-button class="loginBtn" type="primary" size="mini">登录</van-button>
       </van-col>
     </van-row>
+    <!-- 滑动/选项卡切换 -->
+    <van-tabs v-model="active" swipeable class="tabWrap">
+      <van-tab v-for="(item,index) in tabArr" :key="index" :title="item">{{ item }}</van-tab>
+    </van-tabs>
   </div>
 </template>
 
 <script>
+// 引入对vant框架本身一些样式的重置文件
+import "../assets/resetVant.css";
+import axios from "axios";
 export default {
   name: "IndexWrap",
   // props: {
@@ -23,12 +30,19 @@ export default {
   // }
   data() {
     return {
-      msg: "zxcv"
+      active: "",
+      tabArr: []
     };
   },
-  methods:{
-    searchBtnFn(){
-      this.$router.push('/search')
+  created() {
+    axios.get("http://localhost:3344/get_tabList").then(_d => {
+      console.log(_d.data);
+      this.tabArr = _d.data;
+    });
+  },
+  methods: {
+    searchBtnFn() {
+      this.$router.push("/search");
     }
   }
 };
@@ -52,8 +66,8 @@ export default {
   justify-content: center;
   align-content: center;
 }
-.searchIcon{
-  padding-top: .15rem;
+.searchIcon {
+  padding-top: 0.15rem;
 }
 .loginBtn {
   width: 0.98667rem;
@@ -66,5 +80,8 @@ export default {
   margin-left: 0.21333rem;
   font-size: 0.32rem;
   background: #fff;
+}
+.tabWrap {
+  font-size: 0.4rem;
 }
 </style>

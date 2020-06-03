@@ -47,6 +47,13 @@ app.get('/search', (req, res) => {
 	res.send(_resultObj);
 })
 
+// header中滑动tab选项卡切换的title数据API
+app.get('/get_tabList', (req, res) => {
+	let _d = ['推荐', '居家生活', '服饰鞋包', '美食酒水', '个护清洁', '母婴亲子', '运行旅行', '数码家电', '全球特色'];
+	// 我server暂时先响应回去一个_d
+	res.send(_d)
+})
+
 app.listen(3344, () => {
 	console.log("3344接口启用中！");
 })
