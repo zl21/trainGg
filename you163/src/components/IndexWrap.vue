@@ -14,8 +14,28 @@
     </van-row>
     <!-- 滑动/选项卡切换 -->
     <van-tabs v-model="active" swipeable class="tabWrap">
-      <van-tab v-for="(item,index) in tabArr" :key="index" :title="item">{{ item }}</van-tab>
+      <van-tab v-for="(item,index) in tabArr" :key="index" :title="item">
+        <!-- {{ item }} -->
+      </van-tab>
     </van-tabs>
+    <!-- 轮播图 -->
+    <van-swipe class="my-swipe" :autoplay="1000" indicator-color="white">
+      <!-- <van-swipe-item v-for="(item,index) in swiperImgArr" :key="index">
+        <img :src="item.src" />
+      </van-swipe-item>-->
+      <van-swipe-item>
+        <img src="../assets/images/lun1.webp" />
+      </van-swipe-item>
+      <van-swipe-item>
+        <img src="../assets/images/lun2.webp" />
+      </van-swipe-item>
+      <van-swipe-item>
+        <img src="../assets/images/lun3.webp" />
+      </van-swipe-item>
+      <van-swipe-item>
+        <img src="../assets/images/lun4.webp" />
+      </van-swipe-item>
+    </van-swipe>
   </div>
 </template>
 
@@ -23,6 +43,7 @@
 // 引入对vant框架本身一些样式的重置文件
 import "../assets/resetVant.css";
 import axios from "axios";
+// import '../assets/images/lun5.png'
 export default {
   name: "IndexWrap",
   // props: {
@@ -31,13 +52,18 @@ export default {
   data() {
     return {
       active: "",
-      tabArr: []
+      tabArr: [],
+      swiperImgArr: []
     };
   },
   created() {
     axios.get("http://localhost:3344/get_tabList").then(_d => {
       console.log(_d.data);
       this.tabArr = _d.data;
+    });
+    axios.get("http://localhost:3344/get_swiperImg").then(_d => {
+      console.log(_d.data);
+      this.swiperImgArr = _d.data;
     });
   },
   methods: {
@@ -83,5 +109,13 @@ export default {
 }
 .tabWrap {
   font-size: 0.4rem;
+}
+.my-swipe .van-swipe-item {
+  color: #fff;
+  font-size: 20px;
+  line-height: 150px;
+  text-align: center;
+  background-color: #39a9ed;
+  height: 4rem;
 }
 </style>
