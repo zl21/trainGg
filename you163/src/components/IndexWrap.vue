@@ -69,7 +69,7 @@
         />
       </van-grid>
     </div>
-    <!-- m-indexBigPromotionModule -->
+    <!-- Big Promotion Module -->
     <div class="m-indexBigPromotionModule">
       <div class="floor floorTop">
         <a
@@ -92,6 +92,84 @@
           class="promItem promItem-2"
           style="background: url(&quot;https://yanxuan.nosdn.127.net/bacb1276d285175e40a1e0c149f9c6f8.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=375x0&quot;) 0% 0% / 100% 100%;"
         ></a>
+      </div>
+    </div>
+    <!-- Exclusive for freshman Module -->
+    <div class="m-freshmanModule m-indexFloor">
+      <div class="moduleTitle">
+        <span class="txt">新人专享礼</span>
+      </div>
+      <div class="content">
+        <div class="left">
+          <div class="name">新人专享礼包</div>
+          <div class="imgWrap">
+            <div class="m-lazyload img m-lazyload-loaded">
+              <img
+                data-original="//yanxuan.nosdn.127.net/352b0ea9b2d058094956efde167ef852.png"
+                data-src="//yanxuan.nosdn.127.net/352b0ea9b2d058094956efde167ef852.png"
+                class="swiper-lazy"
+                src="//yanxuan.nosdn.127.net/352b0ea9b2d058094956efde167ef852.png"
+                style="display: inline;"
+              />
+            </div>
+            <div class="animate"></div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="module1">
+            <div
+              class="m-activityItem"
+              style="background-image: url(&quot;?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=343x220&quot;); background-size: 100% 100%;"
+            >
+              <div class="picWrap">
+                <div class="m-lazyload pic m-lazyload-loaded">
+                  <img
+                    data-original="https://yanxuan-item.nosdn.127.net/0558cf6c29e030f072210755f1ad7db7.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=200x200"
+                    data-src="https://yanxuan-item.nosdn.127.net/0558cf6c29e030f072210755f1ad7db7.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=200x200"
+                    class="swiper-lazy"
+                    src="https://yanxuan-item.nosdn.127.net/0558cf6c29e030f072210755f1ad7db7.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=200x200"
+                    style="display: inline;"
+                  />
+                </div>
+                <div class="discount">
+                  <div class="line1">¥18.9</div>
+                  <div class="line2">¥21.8</div>
+                </div>
+              </div>
+              <div class="cnt">
+                <div class="title">福利社</div>
+                <div class="subTitle">今日特价</div>
+              </div>
+            </div>
+          </div>
+          <div class="module2">
+            <div
+              class="m-activityItem"
+              style="background-image: url(&quot;{0}?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=343x220&quot;); background-size: 100% 100%;"
+            >
+              <div class="picWrap">
+                <div class="m-lazyload pic m-lazyload-loaded">
+                  <img
+                    data-original="https://yanxuan-item.nosdn.127.net/a40fd46da5dcb4b91412272f331a61f5.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=200x200"
+                    data-src="https://yanxuan-item.nosdn.127.net/a40fd46da5dcb4b91412272f331a61f5.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=200x200"
+                    class="swiper-lazy"
+                    src="https://yanxuan-item.nosdn.127.net/a40fd46da5dcb4b91412272f331a61f5.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=200x200"
+                    style="display: inline;"
+                  />
+                </div>
+                <div class="discount">
+                  <div class="line1">¥218</div>
+                  <div class="line2">¥299</div>
+                </div>
+              </div>
+              <div class="cnt">
+                <div class="title">新人拼团</div>
+                <div class="subTitle"></div>
+                <div class="tag">1元起包邮</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -293,5 +371,149 @@ export default {
 }
 .m-indexBigPromotionModule .promItem-2 {
   width: 4.68rem;
+}
+
+.m-freshmanModule {
+  background-color: #fff;
+  margin-top: 0.26667rem;
+  padding-bottom: 0.4rem;
+}
+.m-indexFloor {
+  background-color: #fff;
+}
+.m-indexFloor,
+.m-sale {
+  margin-bottom: 0.26667rem;
+}
+.m-freshmanModule .moduleTitle {
+  height: 1.2rem;
+  width: 100%;
+  line-height: 1.2rem;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 0.42667rem;
+  background: #fff;
+  overflow: hidden;
+}
+.m-freshmanModule .moduleTitle .txt {
+  display: inline-block;
+  position: relative;
+}
+.m-freshmanModule .moduleTitle .txt::after,
+.m-freshmanModule .moduleTitle .txt::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  width: 0.32rem;
+  height: 0.04rem;
+  background: #333;
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+}
+.m-freshmanModule .moduleTitle .txt::before {
+  left: -0.53333rem;
+}
+.m-freshmanModule .moduleTitle .txt::after {
+  right: -0.53333rem;
+}
+.m-freshmanModule .content {
+  padding-left: 0.4rem;
+  overflow: hidden;
+}
+.m-freshmanModule .left {
+  display: block;
+  width: 4.57333rem;
+  height: 5.78667rem;
+  background: #f9e9cf;
+  border-radius: 0.05333rem;
+  margin-right: 0.05333rem;
+  float: left;
+  color: #333;
+}
+.m-freshmanModule .left .name {
+  font-family: PingFangSC-Medium;
+  font-size: 0.42667rem;
+  padding: 0.4rem 0 0 0.4rem;
+}
+.m-freshmanModule .left .imgWrap {
+  margin: 0.49333rem auto;
+  width: 3.44rem;
+  height: 3.42667rem;
+  position: relative;
+}
+.m-freshmanModule .right {
+  float: left;
+}
+.m-freshmanModule .right .module1 {
+  background: #fbe2d3;
+  border-radius: 4px;
+  width: 4.57333rem;
+  height: 2.86667rem;
+  margin-bottom: 0.05333rem;
+}
+.m-freshmanModule .m-activityItem {
+  display: block;
+  color: #333;
+  width: 4.57333rem;
+  height: 2.86667rem;
+  float: left;
+  border-radius: 0.05333rem;
+  margin: 0 0.05333rem 0.05333rem 0;
+  font-size: 0.32rem;
+  padding: 0.26667rem 0 0 0.4rem;
+  position: relative;
+  box-sizing: border-box;
+}
+.m-freshmanModule .right .module2 {
+  background: #ffecc2;
+  border-radius: 4px;
+  width: 4.57333rem;
+  height: 2.86667rem;
+}
+.m-activityItem .picWrap,
+.m-activityItem .picWrap .pic {
+  width: 2.66667rem;
+  height: 2.66667rem;
+}
+.m-activityItem .picWrap {
+  position: absolute;
+  right: 0;
+}
+.m-activityItem .picWrap .discount {
+  position: absolute;
+  top: 0;
+  right: 0.4rem;
+  width: 1.06667rem;
+  height: 1.06667rem;
+  opacity: 0.8;
+  background: #f59524;
+  border-radius: 50%;
+  padding-top: 0.13333rem;
+  color: #fff;
+  text-align: center;
+}
+.m-activityItem .picWrap .discount .line2 {
+  font-size: 0.26667rem;
+  margin-top: -0.09333rem;
+  text-decoration: line-through;
+}
+.m-activityItem .cnt {
+  position: relative;
+}
+.m-activityItem .title {
+  font-family: PingFangSC-Medium;
+  font-size: 0.42667rem;
+  display: flex;
+  text-align: left;
+}
+.m-activityItem .subTitle,
+.tag {
+  color: #7f7f7f;
+  display: flex;
+  text-align: left;
+}
+.m-freshmanModule .right .module1 .picWrap,
+.m-freshmanModule .right .module2 .picWrap {
+  top: 0.2rem;
 }
 </style>
