@@ -69,6 +69,31 @@
         />
       </van-grid>
     </div>
+    <!-- m-indexBigPromotionModule -->
+    <div class="m-indexBigPromotionModule">
+      <div class="floor floorTop">
+        <a
+          class="promItem promItem-1"
+          style="background: url('https://yanxuan.nosdn.127.net/5d07f2917f7831cd868fc0a0cdf4b9b5.jpeg?quality=75&type=webp&imageView&thumbnail=750x0') 0% 0% / 100% 100%;"
+        ></a>
+      </div>
+      <div class="floor floorFirst" style="height: 1.06667rem;">
+        <a
+          class="promItem promItem-1"
+          style="background: url(&quot;https://yanxuan.nosdn.127.net/3c252eead9c9a9474fda096c73a300ff.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=750x0&quot;) 0% 0% / 100% 100%;"
+        ></a>
+      </div>
+      <div class="floor" style="height: 2.48rem;">
+        <a
+          class="promItem promItem-2"
+          style="background: url(&quot;https://yanxuan.nosdn.127.net/a526ae177b5302d3143d88520d330604.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=375x0&quot;) 0% 0% / 100% 100%;"
+        ></a>
+        <a
+          class="promItem promItem-2"
+          style="background: url(&quot;https://yanxuan.nosdn.127.net/bacb1276d285175e40a1e0c149f9c6f8.png?quality=75&amp;type=webp&amp;imageView&amp;thumbnail=375x0&quot;) 0% 0% / 100% 100%;"
+        ></a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -232,5 +257,41 @@ export default {
   line-height: 0.42667rem;
   background-size: 100% 100%;
   margin-right: 0.13rem;
+}
+
+.m-indexBigPromotionModule {
+  background-color: initial;
+  background-image: none;
+  background-size: 100% 100%;
+}
+.m-indexBigPromotionModule .floorTop {
+  margin: 0 !important;
+  height: 3.2rem;
+}
+.m-indexBigPromotionModule .floor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.26667rem 0.10667rem;
+}
+.m-indexBigPromotionModule .promItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+  color: #333;
+  width: 100%;
+}
+.m-indexBigPromotionModule .promItem .promGood {
+  width: 1.86667rem;
+  height: 1.86667rem;
+  position: absolute;
+}
+.m-indexBigPromotionModule .floorFirst {
+  margin-top: 0.26667rem;
+}
+.m-indexBigPromotionModule .promItem-2 {
+  width: 4.68rem;
 }
 </style>
