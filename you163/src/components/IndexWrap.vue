@@ -95,7 +95,7 @@
       </div>
     </div>
     <!-- Exclusive for freshman Module -->
-    <div class="m-freshmanModule m-indexFloor">
+    <div class="m-freshmanModule">
       <div class="moduleTitle">
         <span class="txt">新人专享礼</span>
       </div>
@@ -172,6 +172,20 @@
         </div>
       </div>
     </div>
+    <!-- 倒计时 -->
+    <div class="countDownWrap">
+      <p>限时购</p>
+      <van-count-down :time="time_val" class="countDdown">
+        <template v-slot="timeData">
+          <span class="block">{{ timeData.hours }}</span>
+          <span class="colon">:</span>
+          <span class="block">{{ timeData.minutes }}</span>
+          <span class="colon">:</span>
+          <span class="block">{{ timeData.seconds }}</span>
+        </template>
+      </van-count-down>
+      <a href="#" class="right">更多 ></a>
+    </div>
   </div>
 </template>
 
@@ -190,6 +204,7 @@ export default {
       active: "",
       tabArr: [],
       swiperImgArr: [],
+      time_val: 30 * 60 * 60 * 1000,
       categoryGridArr: [
         {
           img_url:
@@ -338,9 +353,10 @@ export default {
 }
 
 .m-indexBigPromotionModule {
-  background-color: initial;
+  background-color: rgb(239, 239, 239);
   background-image: none;
   background-size: 100% 100%;
+  padding-bottom: 0.4rem;
 }
 .m-indexBigPromotionModule .floorTop {
   margin: 0 !important;
@@ -374,16 +390,8 @@ export default {
 }
 
 .m-freshmanModule {
-  background-color: #fff;
-  margin-top: 0.26667rem;
-  padding-bottom: 0.4rem;
-}
-.m-indexFloor {
-  background-color: #fff;
-}
-.m-indexFloor,
-.m-sale {
-  margin-bottom: 0.26667rem;
+  background-color: rgb(239, 239, 239);
+  padding-bottom: 0.3rem;
 }
 .m-freshmanModule .moduleTitle {
   height: 1.2rem;
@@ -417,8 +425,9 @@ export default {
   right: -0.53333rem;
 }
 .m-freshmanModule .content {
-  padding-left: 0.4rem;
+  padding: 0 0 0.4rem 0.4rem;
   overflow: hidden;
+  background-color: #fff;
 }
 .m-freshmanModule .left {
   display: block;
@@ -515,5 +524,46 @@ export default {
 .m-freshmanModule .right .module1 .picWrap,
 .m-freshmanModule .right .module2 .picWrap {
   top: 0.2rem;
+}
+
+// 倒计时
+.countDownWrap {
+  height: 1.33333rem;
+  overflow: hidden;
+  padding: 0.4rem 0.4rem;
+}
+.countDownWrap p {
+  float: left;
+  font-size: 0.42667rem;
+  font-family: PingFangSC-Regular;
+  height: 0.48rem;
+  line-height: 0.48rem;
+}
+.countDownWrap .countDdown {
+  float: left;
+  margin: 0.05rem 0 0 0.3rem;
+}
+.countDownWrap a.right {
+  display: block;
+  font-size: 0.37333rem;
+  float: right;
+  color: #333;
+}
+.colon {
+  display: inline-block;
+  margin: 0 .1rem;
+  font-size: 0.37333rem;
+  font-weight: max($numbers: 550);
+}
+.block {
+  display: inline-block;
+  width: 0.48rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  color: #fff;
+  font-size: 0.32rem;
+  text-align: center;
+  background-color: #333;
+  border-radius: 0.05333rem;
 }
 </style>
