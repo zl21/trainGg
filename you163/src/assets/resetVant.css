@@ -6,3 +6,15 @@
 .tabWrap .van-tab{
     font-size: .33rem;
 }
+.categoryGridWrap .van-icon__image{
+    width: 1.46667rem;
+    height: 1.46667rem;
+}
+.categoryGridWrap .van-grid-item__text{
+    margin-top: .13333rem;
+    text-align: center;
+    font-size: .32rem;
+    /* color: #FFF; */
+    line-height: .48rem;
+    white-space: nowrap;
+}

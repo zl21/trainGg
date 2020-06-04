@@ -56,18 +56,18 @@ app.get('/get_tabList', (req, res) => {
 
 // 轮播图的图片数据
 app.get('/get_swiperImg', (req, res) => {
-	// let _n = [
-	// 	'https://yanxuan.nosdn.127.net/d32e22aca0c3dea59c6135578f8594b3.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
-	// 	'https://yanxuan.nosdn.127.net/d32e22aca0c3dea59c6135578f8594b3.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
-	// 	'https://yanxuan.nosdn.127.net/43545a96cf86a70c72037094982fa51d.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
-	// 	'https://yanxuan.nosdn.127.net/6bde94bfe94e65253e7bc636c225d23e.jpg?type=webp&imageView&quality=75&thumbnail=750x0'
-	// ]
 	let _n = [
-		{ "src": '../assets/images/lun1.webp' },
-		{ "src": '../assets/images/lun2.webp' },
-		{ "src": '../assets/images/lun3.webp' },
-		{ "src": '../assets/images/lun4.webp' },
+		'https://yanxuan.nosdn.127.net/ee856ce5b451dbdeab78abffce195957.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
+		'https://yanxuan.nosdn.127.net/195499737e4c86964fc5ba16a3af484c.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
+		'https://yanxuan.nosdn.127.net/43545a96cf86a70c72037094982fa51d.jpg?type=webp&imageView&quality=75&thumbnail=750x0',
+		'https://yanxuan.nosdn.127.net/6bde94bfe94e65253e7bc636c225d23e.jpg?type=webp&imageView&quality=75&thumbnail=750x0'
 	]
+	// let _n = [
+	// 	{ "src": '../assets/images/lun1.webp' },
+	// 	{ "src": '../assets/images/lun2.webp' },
+	// 	{ "src": '../assets/images/lun3.webp' },
+	// 	{ "src": '../assets/images/lun4.webp' },
+	// ]
 	// 接口返回值
 	res.send(_n)
 })

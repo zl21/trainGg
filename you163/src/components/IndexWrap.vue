@@ -21,10 +21,11 @@
     </van-tabs>
     <!-- 轮播图 -->
     <van-swipe class="my-swipe" :autoplay="1000" indicator-color="white">
-      <!-- <van-swipe-item v-for="(item,index) in swiperImgArr" :key="index">
-        <img :src="item.src" />
-      </van-swipe-item>-->
-      <van-swipe-item>
+      <van-swipe-item v-for="(item,index) in swiperImgArr" :key="index">
+        <img :src="item" />
+      </van-swipe-item>
+
+      <!-- <van-swipe-item>
         <img src="../assets/images/lun1.webp" />
       </van-swipe-item>
       <van-swipe-item>
@@ -35,7 +36,7 @@
       </van-swipe-item>
       <van-swipe-item>
         <img src="../assets/images/lun4.webp" />
-      </van-swipe-item>
+      </van-swipe-item>-->
     </van-swipe>
     <!-- 轮播图下面的三个小nodes -->
     <div class="m-indexServicePolicy">
@@ -57,6 +58,17 @@
         </li>
       </ul>
     </div>
+    <!-- categoryGrid -->
+    <div class="categoryGridWrap">
+      <van-grid :column-num="5">
+        <van-grid-item
+          v-for="(item,index) in categoryGridArr"
+          :key="index"
+          :icon="item.img_url"
+          :text="item.img_txt"
+        />
+      </van-grid>
+    </div>
   </div>
 </template>
 
@@ -74,16 +86,68 @@ export default {
     return {
       active: "",
       tabArr: [],
-      swiperImgArr: []
+      swiperImgArr: [],
+      categoryGridArr: [
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/896a3beac514ae8f40aafe028e5fec56.png",
+          img_txt: "新品首发"
+        },
+        {
+          img_url:
+            "http://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png",
+          img_txt: "居家生活"
+        },
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/fede8b110c502ec5799702d5ec824792.png",
+          img_txt: "服饰鞋包"
+        },
+        {
+          img_url:
+            "http://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png",
+          img_txt: "美食酒水"
+        },
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/6c3bd9d885c818b1f73e497335a68b47.png",
+          img_txt: "个护清洁"
+        },
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/559d2a240ec20b096590a902217009ff.png",
+          img_txt: "母婴亲子"
+        },
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/5c088559ebcc3f0ffcda663f04dfbeb2.png",
+          img_txt: "运动旅行"
+        },
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/fbca8e1f2948f0c09fc7672c2c125384.png",
+          img_txt: "数码家电"
+        },
+        {
+          img_url:
+            "https://yanxuan.nosdn.127.net/f7281169d4e82d5d8d52aa1fec83fe01.png",
+          img_txt: "全球特色"
+        },
+        {
+          img_url:
+            "http://yanxuan.nosdn.127.net/12e8efd15b9b210ab156a7ee9b340548.gif",
+          img_txt: "好货抄底"
+        }
+      ]
     };
   },
   created() {
     axios.get("http://localhost:3344/get_tabList").then(_d => {
-      console.log(_d.data);
+      // console.log(_d.data);
       this.tabArr = _d.data;
     });
     axios.get("http://localhost:3344/get_swiperImg").then(_d => {
-      console.log(_d.data);
+      // console.log(_d.data);
       this.swiperImgArr = _d.data;
     });
   },
