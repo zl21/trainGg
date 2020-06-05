@@ -34,3 +34,13 @@
     border-radius: 4px;
     margin-bottom: .16rem;
 }
+.footerTabbar .van-tabbar-item__text{
+    font-size: .32rem;
+}
+.footerTabbar .van-tabbar{
+    height: 1.30667rem;
+}
+.footerTabbar .van-icon{
+    width: .53333rem;
+    height: .53333rem;
+}
