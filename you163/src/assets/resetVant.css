@@ -18,3 +18,19 @@
     line-height: .48rem;
     white-space: nowrap;
 }
+.goodListWrap .van-grid-item__text{
+    font-size: .37333rem;
+    color: #DD1A21;
+    margin-right: .16rem;
+}
+.goodListWrap .van-icon__image{
+    width: 2.88rem;
+    height: 2.88rem;
+}
+.goodListWrap .van-icon{
+    width: 2.88rem;
+    height: 2.88rem;
+    background: #F5F5F5;
+    border-radius: 4px;
+    margin-bottom: .16rem;
+}
