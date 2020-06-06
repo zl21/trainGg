@@ -1,13 +1,14 @@
 <template>
   <div class="footerTabbar">
     <van-tabbar active-color="#f00" v-model="footer_obj" @change="onFooterBtnChange">
-      <van-tabbar-item>
+      <!-- v-model="footer_obj"双向数据绑定，footer_obj值为number，指定当前哪个标签被选中 -->
+      <van-tabbar-item to="/">
         <span>首页</span>
         <template #icon="props">
           <div :class="props.active ? icon.i_home_a : icon.i_home"></div>
         </template>
       </van-tabbar-item>
-      <van-tabbar-item>
+      <van-tabbar-item to="/category">
         <span>分类</span>
         <template #icon="props">
           <div :class="props.active ? icon.i_sort_a : icon.i_sort"></div>
@@ -56,13 +57,19 @@ export default {
       }
     };
   },
+  mounted() {
+    let activeInx = localStorage.getItem("save_inx");
+    // console.log(typeof activeInx); //string类型
+    this.footer_obj = Number(activeInx);
+  },
   methods: {
     // footer按钮切换
-    onFooterBtnChange(index) {
-      console.log(index);
-      /* if (index === 1) {
-        this.$router.push("/category");
-      } */
+    onFooterBtnChange(_inx) {
+      // console.log(_inx);
+      // console.log(typeof _inx); //number类型
+      // 保存从首页跳转时点击跳转的bar的索引，而后反向赋值给footer_obj，从而实现跳转后的当前bar为选中状态。
+      // 涉及到路由跳转及传参，参数的处理方法有很多，此处使用localStorage的方式
+      localStorage.setItem("save_inx", _inx);
     }
   }
 };
