@@ -44,3 +44,27 @@
     width: .53333rem;
     height: .53333rem;
 }
+/* 分类页侧边栏 */
+.sidebarWrap .van-sidebar{
+    width: 2.16rem;
+}
+.sidebarWrap .van-sidebar-item__text{
+    line-height: .66667rem;
+    color: #333;
+    white-space: nowrap;
+    font-size: .37333rem;
+    text-overflow: ellipsis;
+}
+.sidebarWrap .van-sidebar-item{
+    position: relative;
+}
+.sidebarWrap .van-sidebar-item--select::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: .08rem;
+    height: 2.16rem;
+    background-color: #ab2b2b;
+}
