@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import IndexWrap from '@/components/IndexWrap.vue'
 import SearchPage from '@/components/SearchPage'
 import CateList from '@/components/CateList'
+import Detail from '@/components/Detail'
 Vue.use(VueRouter)
 
   const routes = [
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/category',
     name: 'CateList',
     component: CateList
+  },
+  {
+    path: '/detail',
+    name: 'Detail',
+    component: Detail
   }
 ]
 

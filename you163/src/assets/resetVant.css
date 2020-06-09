@@ -68,3 +68,11 @@
     height: 2.16rem;
     background-color: #ab2b2b;
 }
+/* 立即购买/加入购物车 */
+.goodsAction .van-goods-action-button {
+    font-size: .37333rem;
+    height: 1.38667rem;
+}
+.goodsAction .van-goods-action-icon , .van-goods-action-icon__icon{
+    font-size: .37333rem;
+}

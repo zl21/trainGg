@@ -58,7 +58,7 @@ export default {
     };
   },
   mounted() {
-    let activeInx = localStorage.getItem("save_inx");
+    let activeInx = sessionStorage.getItem("save_inx");
     // console.log(typeof activeInx); //string类型
     this.footer_obj = Number(activeInx);
   },
@@ -69,7 +69,7 @@ export default {
       // console.log(typeof _inx); //number类型
       // 保存从首页跳转时点击跳转的bar的索引，而后反向赋值给footer_obj，从而实现跳转后的当前bar为选中状态。
       // 涉及到路由跳转及传参，参数的处理方法有很多，此处使用localStorage的方式
-      localStorage.setItem("save_inx", _inx);
+      sessionStorage.setItem("save_inx", _inx);
     }
   }
 };

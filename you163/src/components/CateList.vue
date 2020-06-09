@@ -8,7 +8,12 @@
     </div>
     <!-- 右侧：对应某导航类别的商品展示区 -->
     <div class="goodsSidebar">
-      <div class="goodsItem" v-for="(item,index) in categoryListObj" :key="index">
+      <div
+        class="goodsItem"
+        v-for="(item,index) in categoryListObj"
+        :key="index"
+        @click="showDetail(item)"
+      >
         <img :src="item.goods_img" />
         <p>{{item.goods_name}}</p>
         <p>{{item.goods_price}}</p>
@@ -81,6 +86,15 @@ export default {
       axios.get("http://localhost:3344/category_list_" + _inx).then(_d => {
         console.log(_d.data);
         this.categoryListObj = _d.data;
+      });
+    },
+    showDetail(_goodDetailObj) {
+      // console.log(_goodDetailObj);
+      // this.$router.push("/detail");
+      // 单纯地路由跳转显然的不ok的，要带着数据跳转到详情（即添加购物车）的界面。跳转后在target页面的created中通过this.$route接收（！！route没有r）
+      this.$router.push({
+        name: "Detail",
+        params: { goodsInfo: _goodDetailObj }
       });
     }
   }
