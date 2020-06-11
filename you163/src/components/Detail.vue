@@ -20,7 +20,9 @@
     </div>
 
     <!-- sku 商品规格 -->
-    <van-sku v-model="show" :sku="sku" :goods="goods" goods-id="goodsIdXXX" />
+    <div class="skuClass">
+      <van-sku v-model="show" :sku="sku" :goods="goods" goods-id="goodsIdXXX" />
+    </div>
 
     <!-- 立即购买/加入购物车 -->
     <div class="goodsAction">
@@ -44,7 +46,7 @@ export default {
       show: false,
       goods: {
         // 默认商品 sku 缩略图
-        picture: "https://img.yzcdn.cn/1.jpg"
+        picture: ""
       },
       sku: {
         // 所有sku规格类目与其值的从属关系，比如商品有颜色和尺码两大类规格，颜色下面又有红色和蓝色两个规格值。
@@ -106,6 +108,8 @@ export default {
     this.goods_name = goodsInfoObj.goods_name;
     this.goods_img = goodsInfoObj.goods_img;
     this.goods_price = goodsInfoObj.goods_price;
+    // 点击加购弹出的商品信息之图片
+    this.goods.picture = goodsInfoObj.goods_img;
   },
   methods: {
     goHome() {

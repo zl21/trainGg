@@ -69,6 +69,9 @@
     background-color: #ab2b2b;
 }
 /* 立即购买/加入购物车 */
+.goodsAction .van-goods-action{
+    padding-bottom: .4rem;
+}
 .goodsAction .van-goods-action-button {
     font-size: .37333rem;
     height: 1.38667rem;
@@ -89,4 +92,33 @@
 .van-nav-bar .van-icon {
     color: #323535;
     margin: 0 .2rem;
+}
+/*sku*/
+.skuClass{
+    text-align: initial;
+}
+.skuClass .van-sku__price-symbol,
+.skuClass .van-sku__price-num,
+.skuClass .van-sku__stock,
+.skuClass .van-sku__stock-num,
+.skuClass .van-sku-header-item,
+.skuClass .van-sku-row__title,
+.skuClass .van-sku-row__item-name,
+.skuClass .van-sku__stepper-title,
+.skuClass .van-cell,
+.skuClass .van-stepper__input{
+    font-size: .37333rem;
+}
+.skuClass .van-stepper__minus,
+.skuClass .van-stepper__input,
+.skuClass .van-stepper__plus{
+    width: .7rem;
+    height: .7rem;
+}
+
+.skuClass .van-sku-actions .van-button{
+    font-size: .37333rem;
+}
+.skuClass .van-sku-actions .van-button{
+    height: .7rem;
 }
