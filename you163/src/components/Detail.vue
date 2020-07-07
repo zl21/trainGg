@@ -21,7 +21,13 @@
 
     <!-- sku 商品规格 -->
     <div class="skuClass">
-      <van-sku v-model="show" :sku="sku" :goods="goods" goods-id="goodsIdXXX" />
+      <van-sku
+        v-model="show"
+        :sku="sku"
+        :goods="goods"
+        goods-id="goodsIdXXX"
+        @buy-clicked="onBuyClicked"
+      />
     </div>
 
     <!-- 立即购买/加入购物车 -->
