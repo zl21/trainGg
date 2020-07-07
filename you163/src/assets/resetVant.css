@@ -122,3 +122,7 @@
 .skuClass .van-sku-actions .van-button{
     height: .7rem;
 }
+/* 未选择商品属性点击了立即购买或加购时弹出的提示 */
+.van-toast__text{
+    font-size: .5rem;
+}
